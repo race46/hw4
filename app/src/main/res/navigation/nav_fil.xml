@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fil"
+    app:startDestination="@id/anasayfa">
+
+    <fragment
+        android:id="@+id/anasayfa"
+        android:name="com.example.hw4.anasayfa"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfa_to_sayfa_a"
+            app:destination="@id/sayfa_a" />
+        <action
+            android:id="@+id/action_anasayfa_to_sayfa_x"
+            app:destination="@id/sayfa_x" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfa_a"
+        android:name="com.example.hw4.sayfa_a"
+        android:label="sayfa_a" >
+        <action
+            android:id="@+id/action_sayfa_a_to_sayfa_b"
+            app:destination="@id/sayfa_b" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfa_b"
+        android:name="com.example.hw4.sayfa_b"
+        android:label="sayfa_b" >
+        <action
+            android:id="@+id/action_sayfa_b_to_sayfa_y"
+            app:destination="@id/sayfa_y"
+            app:popUpTo="@id/anasayfa" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfa_x"
+        android:name="com.example.hw4.sayfa_x"
+        android:label="sayfa_x" >
+        <action
+            android:id="@+id/action_sayfa_x_to_sayfa_y"
+            app:destination="@id/sayfa_y"
+            app:popUpTo="@id/anasayfa" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfa_y"
+        android:name="com.example.hw4.sayfa_y"
+        android:label="sayfa_y" >
+        <action
+            android:id="@+id/action_sayfa_y_to_anasayfa"
+            app:destination="@id/anasayfa" />
+    </fragment>
+</navigation>
